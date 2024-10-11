@@ -5,8 +5,8 @@ ini_set("log_errors",1);
 ini_set("error_log",dirname(__FILE__).'/error_log2.log');
 
 $db_name = getenv('MYSQL_DATABASE') ?: 'hy_db';
-$mysql_username = "root";
-$mysql_password = "123456";
+$mysql_username = getenv('MYSQL_USERNAME') ?: 'root';
+$mysql_password = getenv('MYSQL_PASSWORD') ?: '123456';
 $server_name = getenv('MYSQL_HOST') ?: 'hy-mysql';
 
 // check request method
